@@ -40,11 +40,11 @@ img{
     margin-left: auto;
     margin-right: auto;
     filter: grayscale(1);
+    transition: grayscale 0.5s ease;
 }
 
 img:hover{
     filter: grayscale(0);
-    transition: grayscale 0.5s ease;
 }
 
 #gallery_content{
@@ -67,11 +67,11 @@ img:hover{
     margin-left: auto;
     margin-right: auto;
     filter: grayscale(0);
+    transition: transform .5s ease;
 }
 
 #gallery_content img:hover{
     transform: scale(1.2);
-    transition: transform .5s ease;
 }
 
 #gallery_content p{
