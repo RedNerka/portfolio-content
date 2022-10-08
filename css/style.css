@@ -40,7 +40,7 @@ img{
     margin-left: auto;
     margin-right: auto;
     filter: grayscale(1);
-    transition: grayscale 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 img:hover{
