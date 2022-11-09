@@ -125,7 +125,7 @@ main img{
     transition: filter 0.5s ease;
 }
 
-main img:hover,main img:active{
+main img:hover{
     filter: grayscale(0);
     transition: filter 0.5s ease;
 }
@@ -146,7 +146,7 @@ main img:hover,main img:active{
 }
 
 #gallery_content figure{
-    width: fit-content;
+    max-width: fit-content;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -161,7 +161,7 @@ main img:hover,main img:active{
     transition: transform .5s ease;
 }
 
-#gallery_content img:hover,#gallery_content img:active{
+#gallery_content img:hover{
     transform: scale(1.2);
     transition: transform .5s ease;
 }
