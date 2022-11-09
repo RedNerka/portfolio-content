@@ -1,8 +1,5 @@
 body {
     font-family: 'Merriweather', serif;
-}
-
-.homepage_body,.publisher_body,.dlc_body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, auto);
@@ -187,6 +184,13 @@ figure:hover > .caption{
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center; */
+    grid-column: 1/-1;
+    grid-row: 2/-2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     background: rgba(90, 134, 139, 0.5) url('../images/background1.jpg');
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -196,6 +200,7 @@ figure:hover > .caption{
 
 #gallery_content figure{
     max-width: fit-content;
+    min-width: 300px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -204,6 +209,7 @@ figure:hover > .caption{
 #gallery_content img{
     box-sizing: border-box;
     display: block;
+    min-width: 60vw;
     margin-left: auto;
     margin-right: auto;
     filter: grayscale(0);
