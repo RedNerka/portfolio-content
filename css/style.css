@@ -214,12 +214,12 @@ figure:hover > .caption{
     text-align: center;
 }
 
-#aside_left{
+#left_grid{
     grid-row: 2/span 1;
     grid-column: 1/-1;
 }
 
-#aside_right{
+#right_grid{
     grid-row: 4/span 1;
     grid-column: 1/-1;
 }
@@ -267,13 +267,13 @@ footer{
         grid-column: 2/span 1;
     }
 
-    #aside_left{
+    #left_grid{
         align-content: center;
         grid-row: 2/span 1;
         grid-column: 1/span 1;
     }
 
-    #aside_right{
+    #right_grid{
         align-content: center;
         grid-row: 2/span 1;
         grid-column: 3/span 1;
