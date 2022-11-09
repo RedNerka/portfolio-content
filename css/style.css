@@ -146,7 +146,7 @@ main img:hover{
 }
 
 #gallery_content figure{
-    width: 500px;
+    width: 100%;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -155,8 +155,6 @@ main img:hover{
 #gallery_content img{
     box-sizing: border-box;
     display: block;
-    padding: 0;
-    border: 0;
     margin-left: auto;
     margin-right: auto;
     filter: grayscale(0);
