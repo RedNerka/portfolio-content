@@ -49,25 +49,6 @@ header h1{
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
 }
 
-@keyframes slidein{
-    from { transform: translate(0, 15px); opacity: 0;}
-    to {transform: translate(0,0px); opacity: 1;}
-}
-
-@keyframes slideout{
-    from { transform: translate(0, 0px); opacity: 1;}
-    to {transform: translate(0,15px); opacity: 0;}
-}
-
-@media (prefers-reduced-motion) {
-    .skip{
-      animation: none;
-    }
-    .caption{
-        animation: none;
-    }
-  }
-
 .skip{
     animation: slidein 1s ease-in-out;
     display: block;
@@ -78,6 +59,11 @@ header h1{
     padding: .2em;
     text-decoration: none;
     color: black;
+}
+
+@keyframes slidein{
+    from { transform: translate(0, 15px); opacity: 0;}
+    to {transform: translate(0,0px); opacity: 1;}
 }
 
 .skip:hover{
@@ -256,3 +242,72 @@ footer{
     font-weight: bold;
     background-color: black;
 }
+
+@media all and (min-width: 700px){
+    .skip{
+        animation: slidein 1s ease-in-out;
+        display: block;
+        width: fit-content;
+        margin: .2em auto .2em 0;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: .2em;
+        text-decoration: none;
+        color: black;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    #homepage_content,#publisherfacts_content,#dlc_content{
+        grid-row: 2/span 1;
+        grid-column: 2/span 1;
+    }
+
+    #aside_left{
+        align-content: center;
+        grid-row: 2/span 1;
+        grid-column: 1/span 1;
+    }
+
+    #aside_right{
+        align-content: center;
+        grid-row: 2/span 1;
+        grid-column: 3/span 1;
+    }
+
+    #gallery_content{
+        background: rgba(90, 134, 139, 0.5) url('../images/background1.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+    }
+
+    #aside_left_img{
+        position: fixed;
+        left: 0;
+        top: 20vh;
+        width: 12vw;
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    #aside_right_img{
+        position: fixed;
+        right: 0;
+        top: 20vh;
+        width: 12vw;
+        height: 60vh;
+        object-fit: cover;
+    }
+  }
+
+@media (prefers-reduced-motion) {
+    .skip{
+        animation: none;
+    }
+  }
