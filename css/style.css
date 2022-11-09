@@ -83,14 +83,14 @@ header h1{
     right: 0px;
     padding: .2em;
     text-decoration: none;
-    font-size: x-large;
+    font-size: medium;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 main h2{
     padding: .3em;
-    margin: .5em auto 0;
+    margin: .5em auto;
     color: white;
     background-color: black;
     text-align: center;
@@ -121,7 +121,7 @@ main h3{
 
 main p{
     margin: 1em 2em;
-    text-align: justify;
+    text-align: left;
     line-height: 1.8em;
 }
 
@@ -290,18 +290,18 @@ footer{
     #aside_left_img{
         position: fixed;
         left: 0;
-        top: 20vh;
+        top: 24vh;
         width: 12vw;
-        height: 60vh;
+        height: 52vh;
         object-fit: cover;
     }
 
     #aside_right_img{
         position: fixed;
         right: 0;
-        top: 20vh;
+        top: 24vh;
         width: 12vw;
-        height: 60vh;
+        height: 52vh;
         object-fit: cover;
     }
   }
