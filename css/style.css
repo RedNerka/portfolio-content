@@ -1,3 +1,26 @@
+body {
+    font-family: 'Merriweather', serif;
+}
+
+.homepage_body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+}
+
+.homepage_body header{
+    grid-row: 1/span 1;
+    grid-column: 1/-1;
+}
+
+header h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    background-color: black;
+    color: white;
+}
+
 #nav_bar {
     background: black url(../images/twom_gallery2.jpeg) center;
 }
@@ -29,28 +52,97 @@
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
 }
 
-img{
+@keyframes slidein{
+    from { transform: translate(0, 15px); opacity: 0;}
+    to {transform: translate(0,0px); opacity: 1;}
+}
+
+@media (prefers-reduced-motion) {
+    .skip{
+      animation: none;
+    }
+  }
+
+.skip{
+    animation: slidein 1s ease-in-out;
+    display: block;
+    width: fit-content;
+    margin: .2em auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: .2em;
+    text-decoration: none;
+    color: black;
+}
+
+.skip:hover{
+    background-color: black;
+    color: white;
+}
+
+.skip:focus{
+    background-color: gray;
+    border: 2px solid gray;
+}
+
+main h2{
+    padding: .3em;
+    margin: 0 auto;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+main h2 a{
+    text-decoration: none;
+    color: white;
+}
+
+main h3{
+    padding: .3em;
+    margin: .5em 1em;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: large;
+}
+
+main p{
+    margin: 1em 2em;
+    text-align: justify;
+    line-height: 1.2em;
+}
+
+main img{
     box-sizing: border-box;
     display: block;
     width: 100%;
     max-width: 500px;
-    padding: 20px 20px;
-    border-top: 2px solid rgb(165, 91, 42);
-    border-bottom: 2px solid rgb(165, 91, 42);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     filter: grayscale(1);
     transition: filter 0.5s ease;
 }
 
-img:hover{
+main img:hover{
     filter: grayscale(0);
     transition: filter 0.5s ease;
 }
 
+#homepage_content{
+    grid-row: 3/span 1;
+    grid-column: 1/-1;
+}
+
 #gallery_content{
-    background-color: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgb(80, 80, 80) 0%, rgba(0,0,0,0) 50%,rgb(80, 80, 80) 100%);
+    /* background-color: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(80, 80, 80) 0%, rgba(0,0,0,0) 50%,rgb(80, 80, 80) 100%); */
+    background: url('../images/background1.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #gallery_content figure{
@@ -77,12 +169,35 @@ img:hover{
 }
 
 #gallery_content p{
+    font-family: 'Rock Salt', cursive;
     line-height: 3;
     font-weight: bold;
     text-align: center;
 }
 
+#homepage_aside_left{
+    grid-row: 2/span 1;
+    grid-column: 1/-1;
+}
+
+#homepage_aside_right{
+    grid-row: 4/span 1;
+    grid-column: 1/-1;
+}
+
+aside img{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 footer{
+    padding: 2vh;
+    grid-row: -2/span 1;
+    grid-column: 1/-1;
     text-align: center;
     color: white;
     font-weight: bold;
