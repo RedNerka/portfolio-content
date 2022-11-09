@@ -2,13 +2,13 @@ body {
     font-family: 'Merriweather', serif;
 }
 
-.homepage_body{
+.homepage_body,.publisher_body,.dlc_body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, auto);
 }
 
-.homepage_body header{
+header{
     grid-row: 1/span 1;
     grid-column: 1/-1;
 }
@@ -57,9 +57,17 @@ header h1{
     to {transform: translate(0,0px); opacity: 1;}
 }
 
+@keyframes slideout{
+    from { transform: translate(0, 0px); opacity: 1;}
+    to {transform: translate(0,15px); opacity: 0;}
+}
+
 @media (prefers-reduced-motion) {
     .skip{
       animation: none;
+    }
+    .caption{
+        animation: none;
     }
   }
 
@@ -85,9 +93,21 @@ header h1{
     border: 2px solid gray;
 }
 
+#back_to_nav{
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    padding: .2em;
+    text-decoration: none;
+    font-size: x-large;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 main h2{
     padding: .3em;
-    margin: 0 auto;
+    margin: .5em auto 0;
     color: white;
     background-color: black;
     text-align: center;
@@ -98,6 +118,13 @@ main h2{
 main h2 a{
     text-decoration: none;
     color: white;
+}
+
+main h2 a:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: .2em;
 }
 
 main h3{
@@ -115,6 +142,12 @@ main p{
     line-height: 1.8em;
 }
 
+main ul{
+    margin: 1em 3.5em;
+    line-height: 1.8em;
+    list-style-type: circle;
+}
+
 main img{
     box-sizing: border-box;
     display: block;
@@ -128,18 +161,34 @@ main img{
 main img:hover{
     filter: grayscale(0);
     transition: filter 0.5s ease;
+    
 }
 
-#homepage_content{
+.caption{
+    margin: .1em auto .2em;
+    text-align: center;
+    filter: opacity(0);
+    transition: filter .5s ease;
+}
+
+figure:hover > .caption{
+    filter: opacity(1);
+    transition: filter .5s ease;
+}
+
+#homepage_content,#publisherfacts_content,#dlc_content{
     grid-row: 3/span 1;
     grid-column: 1/-1;
 }
 
 #gallery_content{
-    /* background-color: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgb(80, 80, 80) 0%, rgba(0,0,0,0) 50%,rgb(80, 80, 80) 100%); */
-    background: rgba(90, 134, 139, 0.5) url('../images/background1.jpg');
+    /* background: rgba(90, 134, 139, 0.5) url('../images/background1.jpg');
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center; */
+    background: rgba(90, 134, 139, 0.5) url('../images/background1.jpg');
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
@@ -173,12 +222,12 @@ main img:hover{
     text-align: center;
 }
 
-#homepage_aside_left{
+#aside_left{
     grid-row: 2/span 1;
     grid-column: 1/-1;
 }
 
-#homepage_aside_right{
+#aside_right{
     grid-row: 4/span 1;
     grid-column: 1/-1;
 }
