@@ -79,7 +79,7 @@ header h1{
 #back_to_nav{
     position: fixed;
     z-index: 1;
-    top: 0px;
+    top: 2.1em;
     right: 0px;
     padding: .2em;
     text-decoration: none;
