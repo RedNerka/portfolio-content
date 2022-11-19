@@ -52,7 +52,7 @@ header h1{
 
 #nav_bar a:focus{
     outline: none;
-    background: rgba(128,128,128,0.3);
+    background: rgba(87,87,87,0.3);
     text-decoration: none;
     color: white;
 }
@@ -278,6 +278,12 @@ footer{
     section{
         overflow: scroll;
     }
+
+    #gallery_content p{
+        width: 35vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media all and (min-width: 1000px){
@@ -327,13 +333,6 @@ footer{
         background-position: right;
         flex-direction: row;
     }
-
-    #gallery_content p{
-        width: 35vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
   }
 
 @media (prefers-reduced-motion) {
