@@ -24,6 +24,9 @@
     <body class="publisher_body">
         <header>
             <h1>This War of Mine</h1>
+            <a href="#publisherfacts_content" class="skip">
+                <span>Skip to content  </span><i class="fa-sharp fa-solid fa-up-right-from-square"></i>
+            </a>
             <nav id="nav_bar">
                 <ul>
                     <li><a href="index.html">Homepage</a></li>
@@ -32,9 +35,6 @@
                     <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </nav>
-            <a href="#publisherfacts_content" class="skip">
-                <span>Skip to content  </span><i class="fa-sharp fa-solid fa-up-right-from-square"></i>
-            </a>
             <a href="#nav_bar" id="back_to_nav">
                 <span>Back to Navigation</span>
                 <i class="fa-sharp fa-solid fa-list"></i>
@@ -83,9 +83,21 @@
         </main>
 
         <aside id="left_grid">
-            <figure>
-                <img src="images/side.jpg" alt="The latest poster of This War of Mine" id="aside_left_img"/>
-            </figure>
+            <form
+                action="https://formspree.io/f/mayklapg"
+                method="POST"
+            >
+            <label>
+            Your email:
+            <input type="email" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+            </form>
         </aside>
 
         <footer>
