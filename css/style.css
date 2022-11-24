@@ -65,7 +65,6 @@ header h1{
 }
 
 .skip{
-    animation: slidein 1s ease-in-out;
     display: block;
     width: fit-content;
     margin: .2em auto;
@@ -147,6 +146,7 @@ main ul{
 }
 
 main img{
+    animation: slidein 1s ease-in-out;
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -203,6 +203,7 @@ figure:hover > .caption{
 }
 
 #gallery_content img{
+    animation: none;
     box-sizing: border-box;
     display: block;
     min-width: 60vw;
