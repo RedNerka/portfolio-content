@@ -280,6 +280,10 @@ footer{
         overflow: scroll;
     }
 
+    #gallery_content{
+        flex-direction: column-reverse;
+    }
+
     #gallery_content p{
         width: 35vw;
         margin-left: auto;
@@ -302,6 +306,24 @@ footer{
 
     .skip{
         margin: .2em auto .2em 0;
+    }
+
+    @keyframes slidein_right{
+        from { transform: translate(20em, 0); opacity: 0;}
+        to {transform: translate(0px,0); opacity: 1;}
+    }
+
+    #back_to_nav{
+        z-index: 1;
+        top: 0;
+        right: -15em;
+        padding: 0;
+    }
+
+    #back_to_nav:focus{
+        top: 2.1em;
+        right: 0px;
+        animation: slidein_right 1s ease-in-out;
     }
 
     body{
