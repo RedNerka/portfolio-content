@@ -114,6 +114,11 @@ header h1{
     max-width: 11em;
 }
 
+#back_to_nav:hover{
+    background-color: white;
+    color: black;
+}
+
 main h2{
     padding: .3em;
     margin: .5em auto;
