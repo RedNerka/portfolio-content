@@ -382,7 +382,7 @@ footer{
   }
 
 @media (prefers-reduced-motion) {
-    .skip{
+    main img,#back_to_nav:focus{
         animation: none;
     }
   }
