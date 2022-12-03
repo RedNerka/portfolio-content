@@ -99,8 +99,8 @@ header h1{
 
 #skip:focus{
     position: static;
-    background-color: gray;
-    border: 2px solid gray;
+    background-color: #D1D1D1;
+    border: 2px solid #D1D1D1;
 }
 
 #back_to_nav{
@@ -361,10 +361,6 @@ footer{
         display: block;
         grid-row: 2/span 1;
         grid-column: 2/span 1;
-    }
-
-    section{
-        overflow: auto;
     }
 
     #left_grid{
