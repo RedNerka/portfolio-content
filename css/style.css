@@ -75,6 +75,8 @@ header h1{
 }
 
 .skip{
+    position: relative;
+    left: -100vw;
     display: block;
     width: fit-content;
     margin: .2em auto;
@@ -96,6 +98,7 @@ header h1{
 }
 
 .skip:focus{
+    position: static;
     background-color: gray;
     border: 2px solid gray;
 }
