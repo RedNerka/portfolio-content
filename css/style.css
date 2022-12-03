@@ -300,7 +300,7 @@ footer{
     }
 
     section{
-        overflow: scroll;
+        overflow: auto;
     }
 
     #gallery_content{
