@@ -74,7 +74,7 @@ header h1{
     text-decoration: underline;
 }
 
-.skip{
+#skip{
     position: relative;
     left: -100vw;
     display: block;
@@ -92,12 +92,12 @@ header h1{
     to {transform: translate(0,0px); opacity: 1;}
 }
 
-.skip:hover{
+#skip:hover{
     background-color: black;
     color: white;
 }
 
-.skip:focus{
+#skip:focus{
     position: static;
     background-color: gray;
     border: 2px solid gray;
@@ -330,7 +330,7 @@ footer{
         width: auto;
     }
 
-    .skip{
+    #skip{
         margin: .2em auto .2em 0;
     }
 
